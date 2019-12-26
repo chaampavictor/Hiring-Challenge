@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { AsyncStorage, View, ActivityIndicator, StyleSheet } from "react-native";
-import students from './students';
-import results from './results';
+import students from '../components/students';
+import results from '../components/results';
 
 export default function LoadingScreen(props) {
 

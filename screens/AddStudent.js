@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 import { addStudent, updateStudent } from '../redux/actions/types';
 import { Form, Item, Input, Button, Text as NBText, Card, CardItem, Icon, Header, Label, Picker } from 'native-base'
 
-export default function NewStudent(props) {
+export default function AddStudent(props) {
     const dispatch = useDispatch();
     const {navigation} = props;
 
@@ -66,7 +66,7 @@ export default function NewStudent(props) {
                         dispatch(addStudent(student_));
                     } else {
                         dispatch(updateStudent(student_));
-                        navigation.navigate('Home')
+                        navigation.navigate('Profile')
                     }
 
                     navigation.goBack()
@@ -75,18 +75,13 @@ export default function NewStudent(props) {
         })
     }
 
-  
 
-    // let disabled = (name.length > 0 && grade.length > 0 && gender.length > 0 && age.length > 0) ? false : true;
-    return (
-
-
+     return (
         <View style={styles.container}>
-        <Text style={styles.heading}>Add Student Results</Text>
+        <Text style={styles.heading}>Add/Update Student Info</Text>
         <Card style={styles.card}>
             <Item fixedLabel>
                 <Label>Full Name:</Label>
-
                 <Input
                     required
                     value={name}
@@ -96,18 +91,14 @@ export default function NewStudent(props) {
 
             <Item fixedLabel>
                 <Label>Student #:</Label>
-
                 <Input
                     value={studentnumber}
                     onChangeText={(text) => setStudentnumber(text)}
-                    // onChangeText={val => this.onChangeText('studentnumber', val)}
-                   
-                />
+                    />
             </Item>
 
             <Item fixedLabel>
                 <Label>Age:</Label>
-
                 <Input
                     value={age}
                     onChangeText={(text) => setAge(text)}
@@ -117,7 +108,6 @@ export default function NewStudent(props) {
 
             <Item fixedLabel>
                 <Label>Year Of Study:</Label>
-
                 <Input
                     required
                     value={year}
@@ -133,8 +123,6 @@ export default function NewStudent(props) {
                     iosIcon={<Icon name="arrow-down" />}
                     style={{ width: undefined }}
                     placeholder="Select your SIM"
-                    // placeholderStyle={{ color: "#bfc6ea" }}
-                    // placeholderIconColor="#007aff"
                     selectedValue={gender}
                     onChangeText={(text) => setGender(text)}
                 >
@@ -145,12 +133,17 @@ export default function NewStudent(props) {
             </Item>
 
 
+            <Item fixedLabel>
+                <Label>Gender:</Label>
+                <Input
+                    value={gender}
+                    onChangeText={(text) => setGender(text)}
+                />
+            </Item>
 
 
            
         
-
-
 
             <CardItem>
                 <TouchableOpacity onPress={SubmitStudent} activeOpacity={0.4} style={styles.price_Button}>
@@ -161,60 +154,6 @@ export default function NewStudent(props) {
             </CardItem>
         </Card>
     </View>
-        // <KeyboardAvoidingView keyboardVerticalOffset={Header.HEIGHT} style={styles.flex} behavior="padding">
-        //     <SafeAreaView style={styles.flex}>
-        //         {/* <View> */}
-        //             <TextInput
-        //                 onChangeText={(text) => setName(text)}
-        //                 label="Student Name"
-        //                 underlineColor="black"
-        //                 theme={theme}
-        //                 style={[styles.text]}
-        //                 value={name}
-        //             />
-        //             <TextInput
-        //                 onChangeText={(text) => setAge(text)}
-        //                 label="Enter Age"
-        //                 underlineColor="black"
-        //                 theme={theme}
-        //                 style={[styles.text]}
-        //                 value={age}
-        //                 keyboardType="number-pad"
-        //             />
-        //             <TextInput
-        //                 onChangeText={(text) => setGrade(text)}
-        //                 label="Student Grade"
-        //                 underlineColor="black"
-        //                 theme={theme}
-        //                 style={[styles.text]}
-        //                 value={grade}
-        //                 keyboardType="number-pad"
-        //             />
-        //             <TextInput
-        //                 onChangeText={(text) => setGender(text)}
-        //                 label="Student Gender"
-        //                 underlineColor="black"
-        //                 theme={theme}
-        //                 style={[styles.text]}
-        //                 value={gender}
-        //             />
-        //         {/* </View> */}
-
-        //         <View style={styles.buttonContainer}>
-        //             <View style={{flex: 1, alignItems: "flex-end"}}>
-        //                 <TouchableHighlight
-        //                     style={[styles.button]}
-        //                     onPress={onSave}
-        //                     underlayColor="rgba(0, 0, 0, 0)"
-        //                 >
-        //                     <Text style={[styles.buttonText, {color: "#FFF"}]}>
-        //                         Save
-        //                     </Text>
-        //                 </TouchableHighlight>
-        //             </View>
-        //         </View>
-        //     </SafeAreaView>
-        // </KeyboardAvoidingView>
     )
 
 }
@@ -234,7 +173,7 @@ const styles = StyleSheet.create({
 		width: '90%',
 		marginTop: 15,
 		marginBottom: 10,
-		backgroundColor: '#29ab87',
+		backgroundColor: '#6500ff',
 		borderRadius: 4,
 		padding: 17,
 		flexDirection: 'row',
@@ -260,6 +199,6 @@ const styles = StyleSheet.create({
 		fontSize: 30,
 		textAlign: 'center',
 		margin: 10,
-		color: '#29ab87'
+		color: '#6500ff'
 	}
 });

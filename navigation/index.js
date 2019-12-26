@@ -1,11 +1,11 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import LoadingScreen from '../components/LoadingScreen';
-import HomeScreen from '../components/Home';
-import NewStudentScreen from '../components/NewStudent';
-import NewResultScreen from '../components/NewResult';
-import StudentDetails from '../components/StudentDetails';
-import Profile from '../components/Profile';
+import LoadingScreen from '../screens/LoadingScreen';
+import HomeScreen from '../screens/Home';
+import AddStudent from '../screens/AddStudent';
+import AddResult from '../screens/AddResult';
+import StudentDetails from '../screens/StudentDetails';
+import Profile from '../screens/Profile';
 
 
 
@@ -13,25 +13,25 @@ const AppStack = createStackNavigator({
     Home: {
         screen: HomeScreen,
         navigationOptions: ({ navigation }) => ({
-            title: `HomePage`
+            header: null
         })
     },
-    NewStudent: {
-        screen: NewStudentScreen,
+    AddStudent: {
+        screen: AddStudent,
         navigationOptions: ({ navigation }) => ({
-            title: `Create Student`
+            header: null
         })
     },
-    NewResult: {
-        screen: NewResultScreen,
+    AddResult: {
+        screen: AddResult,
         navigationOptions: ({ navigation }) => ({
-            title: `Add Student Results`
+            header: null
         })
     },
     StudentDetails: {
         screen: StudentDetails,
         navigationOptions: ({ navigation }) => ({
-            title: `Student Details`
+            header: null
         })
     },
     Profile: {

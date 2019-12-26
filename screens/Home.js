@@ -1,11 +1,14 @@
 
 import React, { useEffect, useState } from "react";
-import { FlatList, StyleSheet, SafeAreaView, View, Text, ActivityIndicator, TouchableOpacity, Dimensions, TouchableHighlight, AsyncStorage} from 'react-native';
+import { FlatList, StyleSheet, SafeAreaView, View, Text, ActivityIndicator, TouchableOpacity, Dimensions, TouchableHighlight, AsyncStorage,ScrollView} from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import { Card, Button, Container, Header, Content, Tab, Tabs, CardItem, Body, Fab, Icon, Left, Right } from 'native-base';
+
 import { getStudents, deleteStudent } from '../redux/actions/types';
-import ListItem from './ListItem';
+import ListItem from '../components/ListItem';
 
 export default function Home(props) {
+    
     const dispatch = useDispatch();
     const {navigation} = props;
 
@@ -50,7 +53,7 @@ export default function Home(props) {
     }
 
     const onEdit = (item) => {
-        navigation.navigate('NewStudent', {student: item, title: 'Edit Student'})
+        navigation.navigate('AddStudent', {student: item, title: 'Edit Student'})
         alert(JSON.stringify(item))
     }
 
@@ -85,19 +88,31 @@ export default function Home(props) {
     } else {
         return (
             <View style={styles.container}>
+<Header style={styles.header}>
+                    <Body>
+                        <Text style={styles.headerText}>THEBE</Text>
+                    </Body>
+                    <Right>
+                    </Right>
+                </Header>
+
+
+<ScrollView>
                 <FlatList
                     data={students}
                     renderItem={renderItem}
                     keyExtractor={(item, index) => `students_${index}`}
                 />
+</ScrollView>
 
-                <TouchableHighlight
-                    style={styles.floatingButton}
-                    underlayColor='#228B22'
-                    onPress={() => navigation.navigate('NewStudent', {title: "New Student"})}
-                >
-                    <Text style={{fontSize: 25, color: 'white'}}>+</Text>
-                </TouchableHighlight>
+<View style={{ flex: 1 }}>
+                    <Fab
+                        position="bottomRight"
+                        onPress={() => navigation.navigate('AddStudent', {title: "New Student"})}>
+                        <Icon name="add" />
+                    </Fab>
+                </View>
+              
             </View>
         )
     }
@@ -112,31 +127,24 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5F5F5'
     },
 
-    activityIndicatorContainer:{
-        backgroundColor: "#fff",
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex: 1,
+  
+    headers: {
+        marginTop: 10,
+       
+    },
+    header: {
+        marginTop: 30,
+
     },
 
-    floatingButton: {
-        backgroundColor: '#228B22',
-        borderColor: '#006400',
-        borderWidth: 1,
-        height: 55,
-        width: 55,
-        borderRadius: 55 / 2,
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        bottom: 60,
-        right: 15,
-        shadowColor: "#000000",
-        shadowOpacity: 0.5,
-        shadowRadius: 2,
-        shadowOffset: {
-            height: 1,
-            width: 0
-        }
-    }
+    headerIcon: {
+        color: '#fff'
+    },
+    headerText: {
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: 20
+
+    },
+
 });

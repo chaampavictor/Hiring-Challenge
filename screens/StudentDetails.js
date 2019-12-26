@@ -80,7 +80,7 @@ export default function StudentDetails(props) {
     }
 
     const onEditStudent = (studentObject) => {
-        navigation.navigate('NewStudent', {student: studentObject[0]})
+        navigation.navigate('AddStudent', {student: studentObject[0]})
     }
 
     const onDeleteStudent = (id) => {
@@ -108,7 +108,7 @@ export default function StudentDetails(props) {
     }
 
     const onEditResult = (item) => {
-        navigation.navigate('NewResult', {result: item})
+        navigation.navigate('AddResult', {result: item})
     }
 
     const onDeleteResult = (id) => {
@@ -174,46 +174,6 @@ export default function StudentDetails(props) {
           <Text>Awesome segment</Text>
         </Content>
             </Container>
-            // <SafeAreaView style={styles.container}>
-            //     <Card>
-            //         <Card.Content>
-            //             <Title style={{textDecorationLine: 'underline'}}>{name}</Title>
-            //             <View style={styles.cardStyle}>
-            //                 <Paragraph style={{fontSize: 20}}><Text style={{fontWeight: 'bold'}}>Grade:</Text> {grade}</Paragraph>
-            //                 <Paragraph style={{fontSize: 20}}><Text style={{fontWeight: 'bold'}}>Age:</Text>  {age}</Paragraph>
-            //             </View>
-            //             <View style={styles.cardStyle}>
-            //                 <Paragraph style={{fontSize: 20}}><Text style={{fontWeight: 'bold'}}>Gender:</Text>  {gender}</Paragraph>
-            //             </View>
-            //         </Card.Content>
-            //         <Card.Actions style={{justifyContent: 'space-between'}}>
-            //             <Button onPress={() => {
-            //                 onEditStudent(studentObject)
-            //             }}>Edit Student</Button>
-            //             <Button onPress={() => {
-            //                 onDeleteStudent(studentId)
-            //             }}>Delete Student</Button>
-            //         </Card.Actions>
-            //     </Card>
-
-            //     <View>
-            //         <Text>ADD RESULTS</Text>
-            //     </View>
-
-            //     <FlatList
-            //         data={results}
-            //         renderItem={renderItem}
-            //         keyExtractor={(item, index) => `results_${index}`}
-            //     />
-    
-            //     <TouchableHighlight
-            //         style={styles.floatingButton}
-            //         underlayColor='#228B22'
-            //         onPress={() => navigation.navigate('NewResult', {id: studentId})}
-            //     >
-            //         <Text style={{fontSize: 25, color: 'white'}}>+</Text>
-            //     </TouchableHighlight>
-            // </SafeAreaView>
         )
     }
 }
