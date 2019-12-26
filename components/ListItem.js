@@ -21,7 +21,7 @@ export default function ListItem({ item, index, navigation, onDelete, onEdit }) 
                     </Left>
 
                     <Right>
-                    <Icon active name="person" />
+                    <Icon active name="person" style={{fontSize: 20, color: '#6500FF'}}/>
                     </Right>
                 </CardItem>
             </Card>

@@ -88,6 +88,7 @@ export default function AddResult(props) {
                 <Input
                     value={marks}
                     onChangeText={(text) => setMark(text)}
+                    keyboardType={'numeric'}
                     />
             </Item>                  
             <CardItem>

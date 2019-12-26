@@ -78,7 +78,7 @@ export default function AddStudent(props) {
 
      return (
         <View style={styles.container}>
-        <Text style={styles.heading}>Add/Update Student Info</Text>
+        <Text style={styles.heading}>Student Info</Text>
         <Card style={styles.card}>
             <Item fixedLabel>
                 <Label>Full Name:</Label>
