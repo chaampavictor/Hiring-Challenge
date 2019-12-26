@@ -115,24 +115,6 @@ export default function AddStudent(props) {
                 />
             </Item>
 
-
-            <Item picker fixedLabel>
-                <Label>Gender:</Label>
-                <Picker
-                    mode="dropdown"
-                    iosIcon={<Icon name="arrow-down" />}
-                    style={{ width: undefined }}
-                    placeholder="Select your SIM"
-                    selectedValue={gender}
-                    onChangeText={(text) => setGender(text)}
-                >
-                    <Picker.Item label="" value="" />
-                    <Picker.Item label="Male" value="male" />
-                    <Picker.Item label="Female" value="female" />
-                </Picker>
-            </Item>
-
-
             <Item fixedLabel>
                 <Label>Gender:</Label>
                 <Input

@@ -8,14 +8,6 @@ import { Container, Header, Content, Card, CardItem, Icon, Right, Left, Button }
 
 export default function ListItem({ item, index, navigation, onDelete, onEdit }) {
 
-    function random() {
-        if (index % 2 === 0) {
-            return colors[0]
-        }
-        else {
-            return colors[1]
-        }
-    }
 
     return (
         <View style={styles.row}>
@@ -25,12 +17,11 @@ export default function ListItem({ item, index, navigation, onDelete, onEdit }) 
 
                 <CardItem>
                     <Left>
-                        <Icon active name="person" />
                         <Text>{item.name}</Text>
                     </Left>
 
                     <Right>
-                        <Text>{item.grade}</Text>
+                    <Icon active name="person" />
                     </Right>
                 </CardItem>
             </Card>

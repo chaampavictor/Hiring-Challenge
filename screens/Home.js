@@ -90,7 +90,7 @@ export default function Home(props) {
             <View style={styles.container}>
 <Header style={styles.header}>
                     <Body>
-                        <Text style={styles.headerText}>THEBE</Text>
+                        <Text style={styles.headerText}>THEBE </Text>
                     </Body>
                     <Right>
                     </Right>

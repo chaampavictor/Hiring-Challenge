@@ -4,7 +4,6 @@ import LoadingScreen from '../screens/LoadingScreen';
 import HomeScreen from '../screens/Home';
 import AddStudent from '../screens/AddStudent';
 import AddResult from '../screens/AddResult';
-import StudentDetails from '../screens/StudentDetails';
 import Profile from '../screens/Profile';
 
 
@@ -28,12 +27,7 @@ const AppStack = createStackNavigator({
             header: null
         })
     },
-    StudentDetails: {
-        screen: StudentDetails,
-        navigationOptions: ({ navigation }) => ({
-            header: null
-        })
-    },
+   
     Profile: {
         screen: Profile,
         navigationOptions: ({ navigation }) => ({

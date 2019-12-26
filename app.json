@@ -1,7 +1,7 @@
 {
 	"expo": {
-		"name": "visco",
-		"slug": "visco",
+		"name": "thebe",
+		"slug": "thebe",
 		"privacy": "public",
 		"sdkVersion": "33.0.0",
 		"platforms": ["ios", "android"],
@@ -17,7 +17,7 @@
 			"fallbackToCacheTimeout": 0
 		},
 		"android": {
-			"package": "com.victor.visco"
+			"package": "com.victor.thebe"
 		  },
 		"assetBundlePatterns": ["**/*"],
 		"ios": {

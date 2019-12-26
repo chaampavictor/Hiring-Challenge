@@ -65,13 +65,13 @@ export default function Profile(props) {
                                 <View style={{ width: 50, }} >
 
                                     <TouchableOpacity onPress={() => { OnEditResult(item) }}>
-                                        <Icon active name="paper" tyle="color:blue" />
+                                        <Icon active name="paper" style={{fontSize: 20, color: '#6500FF'}} />
                                     </TouchableOpacity>
                                 </View>
                                 <View style={{ width: 50 }}>
 
                                     <TouchableOpacity onPress={() => { onDeleteResult(item.id) }}>
-                                        <Icon active name="trash" tyle="color:red" />
+                                        <Icon active name="trash" style={{fontSize: 20, color: 'red'}} />
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -151,7 +151,7 @@ export default function Profile(props) {
             <Container>
                 <Header style={styles.header}>
                     <Left>
-                        <TouchableWithoutFeedback button onPress={() => this.props.navigation.navigate('Home')}>
+                        <TouchableWithoutFeedback button onPress={() => navigation.navigate('Home')}>
                             <Icon name='arrow-back' style={styles.headerIcon} />
                         </TouchableWithoutFeedback>
                     </Left>
