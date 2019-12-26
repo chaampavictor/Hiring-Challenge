@@ -3,7 +3,7 @@
 
 you will need to have react native, expo installed on your machine
 
-install the expo app from PlayStore
+install the expo app on your phone or any android device from PlayStore
 
 clone the repo and run npm install
 
