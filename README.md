@@ -7,6 +7,8 @@ install the expo app from PlayStore
 
 clone the repo and run npm install
 
+Run npm start to run the app
+
 scan the qr-code with an android device
 
 
