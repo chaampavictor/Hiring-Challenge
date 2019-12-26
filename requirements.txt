@@ -1,0 +1,15 @@
+HERE ARE SOME OF THE RESOURCES I USED FOR THIS CHALLENGE
+
+1.https://medium.com/mesan-digital/tutorial-2a-how-to-add-crud-operations-to-your-react-native-app-using-react-hooks-and-redux-5896ebab89ea
+
+2.https://github.com/MosesEsan/mesan-react-native-redux-crud-operations-2017/blob/master/app/components/new_quote.js
+
+3.https://medium.com/mesan-digital/tutorial-react-native-redux-with-crud-operations-cdb449538886
+
+4.https://docs.nativebase.io/
+
+5.https://www.youtube.com/watch?v=Hn2acItzQBk&t=82s
+
+6.https://www.youtube.com/watch?v=whZNYPldMEY
+
+7.https://redux.js.org/
